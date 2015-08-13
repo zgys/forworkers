@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:orientation="vertical" android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+
+<!--<TextView--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:text="New Text"--><!--android:id="@+id/tvTitle"--><!--android:layout_gravity="center_horizontal" />-->
+
+<!--<TextView--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:textAppearance="?android:attr/textAppearanceLarge"--><!--android:text="Large Text"--><!--android:id="@+id/tvContent"--><!--android:layout_gravity="center_horizontal" />--><!--</LinearLayout>-->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_order_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="aj15072501"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_order_service_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_order_num"
+            android:layout_marginTop="5dp"
+            android:text="时间：即时上门" />
+
+        <TextView
+            android:id="@+id/tv_order_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_order_service_time"
+            android:layout_marginTop="5dp"
+            android:text="地点：水清木华园小区2号楼" />
+
+        <TextView
+            android:id="@+id/tv_order_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_order_site"
+            android:layout_marginTop="5dp"
+            android:text="项目：水管线z" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/button_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/info"
+        android:layout_alignBottom="@id/info"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/btn_order_take"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/btn_order_take" />
+
+        <Button
+            android:id="@+id/btn_order_ignore"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_order_take"
+            android:text="@string/btn_order_ignore" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10px"
+        android:layout_below="@id/button_panel"
+        android:background="?android:attr/listDivider"
+        />
+</RelativeLayout>
