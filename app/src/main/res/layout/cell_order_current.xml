@@ -64,22 +64,22 @@
         android:layout_alignParentRight="true">
 
         <Button
-            android:id="@+id/btn_order_take"
+            android:id="@+id/btn_order_work"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:text="@string/btn_order_take" />
+            android:text="@string/btn_order_work" />
 
         <Button
-            android:id="@+id/btn_order_ignore"
+            android:id="@+id/btn_order_abnormal"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/btn_order_take"
-            android:text="@string/btn_order_ignore" />
+            android:text="@string/btn_order_abnormal" />
     </RelativeLayout>
 
     <View

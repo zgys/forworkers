@@ -11,4 +11,9 @@
     <string name="title">维修员工客户端</string>
     <string name="btn_order_take">\t接单\t\t</string>
     <string name="btn_order_ignore">\t忽略\t\t</string>
+    <string name="title_activity_aty_rest">AtyRest</string>
+    <string name="btn_order_work">\t进入订单\t\t</string>
+    <string name="btn_order_details">\t详情\t\t</string>
+    <string name="btn_order_abnormal">\t提交异常\t\t</string>
+    <string name="title_activity_aty_check">AtyCheck</string>
 </resources>

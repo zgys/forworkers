@@ -3,13 +3,13 @@ package com.diting.zgy.forworkers.adapter.data;
 /**
  * Created by Administrator on 2015/8/8.
  */
-public class DataOrderTake {
+public class DataOrderHistory {
     private String orderNum = null;                 //订单号
     private String orderServiceTime = null;        //服务时间
     private String orderSite = null;                //服务地点
     private String orderProject = null;             //服务项目
 
-    public DataOrderTake(String order_num, String order_service_time, String order_site, String order_project) {
+    public DataOrderHistory(String order_num, String order_service_time, String order_site, String order_project) {
         this.orderNum = order_num;
         this.orderServiceTime = order_service_time;
         this.orderSite = order_site;

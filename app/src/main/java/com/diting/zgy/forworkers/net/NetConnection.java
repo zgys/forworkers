@@ -9,8 +9,11 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.concurrent.TimeoutException;
 
 /**
  * Created by Administrator on 2015/7/31.
@@ -33,6 +36,7 @@ public class NetConnection {
                         case POST:
                             uc = new URL(url).openConnection();
                             uc.setDoOutput(true);
+                            uc.setConnectTimeout(3000);
                             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(uc.getOutputStream(), Config.CHARSET));
                             bw.write(paramsStr.toString());
                             bw.flush();
@@ -53,6 +57,8 @@ public class NetConnection {
                     }
                     System.out.println("Result:"+result);
                     return result.toString();
+                } catch (SocketTimeoutException e){
+                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -64,14 +70,13 @@ public class NetConnection {
             protected void onPostExecute(String result) {
                 super.onPostExecute(result);
 
-                if(result!=null){
-                    if(successCallback!=null){
+                if(result!=null) {
+                    if (successCallback != null) {
                         successCallback.onSuccess(result);
                     }
-                    else{
-                        if (failCallback!=null){
-                            failCallback.onFail();
-                        }
+                }else{
+                    if (failCallback!=null){
+                        failCallback.onFail();
                     }
                 }
             }

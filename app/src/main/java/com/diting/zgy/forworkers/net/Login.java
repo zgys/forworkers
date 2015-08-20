@@ -19,7 +19,7 @@ public class Login {
                     switch (obj.getInt(Config.KEY_STATUS)){
                         case Config.RESULT_STATUS_SUCCESS:
                             if (successCallback!=null){
-                                successCallback.onSuccess(obj.getString(Config.KEY_TOKEN));
+                                successCallback.onSuccess(obj.getString(Config.KEY_TOKEN),obj.getBoolean(Config.KEY_REST_STATUS));
                             }
                             break;
                         default:
@@ -47,7 +47,7 @@ public class Login {
     }
 
     public static interface SuccessCallback{
-        void onSuccess(String token);
+        void onSuccess(String token,boolean isrested);
     }
 
     public static interface FailCallback{

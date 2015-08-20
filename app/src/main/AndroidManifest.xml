@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/MyTheme" >
         <activity
-            android:name="com.diting.zgy.forworkers.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,12 +19,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.diting.zgy.forworkers.atys.AtyMain"
+            android:name=".atys.AtyMain"
             android:label="@string/title_activity_aty_main" >
         </activity>
         <activity
-            android:name="com.diting.zgy.forworkers.atys.AtyLogin"
+            android:name=".atys.AtyLogin"
             android:label="@string/title_activity_aty_login" >
+        </activity>
+        <activity
+            android:name=".atys.AtyRest"
+            android:label="@string/title_activity_aty_rest" >
+        </activity>
+        <activity
+            android:name=".atys.AtyCheck"
+            android:label="@string/title_activity_aty_check" >
         </activity>
     </application>
 

@@ -57,29 +57,22 @@
     <RelativeLayout
         android:id="@+id/button_panel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/info"
         android:layout_alignBottom="@id/info"
         android:layout_alignParentRight="true">
 
         <Button
-            android:id="@+id/btn_order_take"
+            android:id="@+id/btn_order_details"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/btn_order_details"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/btn_order_take" />
+            android:layout_alignParentEnd="true" />
 
-        <Button
-            android:id="@+id/btn_order_ignore"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/btn_order_take"
-            android:text="@string/btn_order_ignore" />
     </RelativeLayout>
 
     <View

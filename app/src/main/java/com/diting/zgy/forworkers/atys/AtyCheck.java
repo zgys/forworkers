@@ -5,12 +5,12 @@ import android.os.Bundle;
 
 import com.diting.zgy.forworkers.R;
 
-public class AtyRest extends Activity {
+public class AtyCheck extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aty_rest);
+        setContentView(R.layout.activity_aty_check);
     }
 
 }

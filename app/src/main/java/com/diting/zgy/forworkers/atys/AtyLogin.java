@@ -46,16 +46,18 @@ public class AtyLogin extends Activity {
                 new Login(etAccount.getText().toString(),etPasswd.getText().toString(),new Login.SuccessCallback(){
 
                     @Override
-                    public void onSuccess(String token){
+                    public void onSuccess(String token,boolean isrested){
 
                         pd.dismiss();
 
                         Config.cacheToken(AtyLogin.this, token);
                         Config.cacheAccountNum(AtyLogin.this, etAccount.getText().toString());
+                        Config.cacheRestStatus(AtyLogin.this,isrested);
 
                         Intent i = new Intent(AtyLogin.this,AtyMain.class);
                         i.putExtra(Config.KEY_TOKEN,token);
                         i.putExtra(Config.KEY_ACCOUNT_NUM,etAccount.getText().toString());
+                        i.putExtra(Config.KEY_REST_STATUS,isrested);
                         startActivity(i);
 
                         finish();
